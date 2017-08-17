@@ -1,4 +1,4 @@
-# gcp_Speech_api
+# Google Cloud Platform (GCP) - speech api
 http://jybaek.tistory.com/671
 
 ## 테스트 음성 파일 생성
