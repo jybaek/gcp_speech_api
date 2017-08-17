@@ -9,4 +9,5 @@ $ sox hello.wav --channels=1 --rate 16k --bits 16 test.raw
 ## Usage
 ```bash
 $ python3 speech.py
+Transcript: 안녕 하세요 좋은 아침입니다
 ```
