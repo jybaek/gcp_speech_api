@@ -1,4 +1,5 @@
 # gcp_Speech_api
+http://jybaek.tistory.com/671
 
 ## 테스트 음성 파일 생성
 wav 파일을 raw 형태로 변환
