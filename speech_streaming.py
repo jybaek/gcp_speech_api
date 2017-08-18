@@ -9,7 +9,6 @@ try:
 except ImportError:
     print("Error speech import error")
     exit(255)
-from google.cloud.speech import enums
 from google.cloud.speech import types
 
 # Instantiates a client
@@ -26,7 +25,7 @@ with io.open("./test.raw", 'rb') as stream:
     )]
 
 config=types.StreamingRecognitionConfig(config=config)
-responses = speech.SpeechClient().streaming_recognize(config,requests)
+responses = client.streaming_recognize(config,requests)
 
 for response in responses:
     for result in response.results:
