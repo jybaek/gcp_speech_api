@@ -1,7 +1,7 @@
 # Google Cloud Platform (GCP) - speech api
 관련 글과 자세한 설명은 [여기 블로그](http://jybaek.tistory.com/671)를 참고하도록 한다. 
 
-## prerequisite
+## GCP Prerequisite
 ### Authentication
 ```bash
 $ gcloud auth application-default login
