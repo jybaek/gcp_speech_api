@@ -13,8 +13,8 @@ $ pip install google-cloud-speech
 ```
 
 ## 테스트 음성 파일 생성
-공식 API 페이지에는 *wav format* 이 지원된다고 명시되어 있지만 정상적으로 인식되지 않음. 
-그래서 wav 파일을 raw 형태로 변환하고 사용해야 함. 아래는 *mac* 에서 wav 를 raw 로 변환하는 예제.
+공식 *API* 페이지에는 *wav format* 이 지원된다고 명시되어 있지만 정상적으로 인식되지 않음. 
+그래서 *wav* 파일을 raw 형태로 변환하고 사용해야 함. 아래는 *mac* 에서 *wav* 를 *raw* 로 변환하는 예제.
 ```bash
 $ sox hello.wav --channels=1 --rate 16k --bits 16 test.raw
 ```
@@ -31,7 +31,7 @@ confidence: 0.5344622135162354
 ```
 
 ## 실시간 음성 인식
-pyaudio 를 설치해야 하는데 portAudio 와 dependency 가 존재하기 때문에 아래 링크를 참고해서
+`pyaudio` 를 설치해야 하는데 `portAudio` 와 *dependency* 가 존재하기 때문에 아래 링크를 참고해서
 먼저 설치하도록 한다.
 
 https://stackoverflow.com/a/33821084/4599185
@@ -41,4 +41,4 @@ https://stackoverflow.com/a/33821084/4599185
 ```bash
 $ python3 transcribe_streaming_mic.py
 ```
-이 코드는 googlecloudplatform 에 등록되어있는 예제 코드를 language 만 변경해서 사용한 것이므로 참고하도록 한다.
+이 코드는 `googlecloudplatform` 에 등록되어있는 예제 코드를 *language* 만 변경해서 사용한 것이므로 참고하도록 한다.
