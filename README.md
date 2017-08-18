@@ -1,5 +1,5 @@
 # Google Cloud Platform (GCP) - speech api
-관련 글은 [여기 블로그](http://jybaek.tistory.com/671)를 참고하도록 한다. 
+관련 글과 자세한 설명은 [여기 블로그](http://jybaek.tistory.com/671)를 참고하도록 한다. 
 
 ## 테스트 음성 파일 생성
 공식 API 페이지에는 *wav format* 이 지원된다고 명시되어 있지만 정상적으로 인식되지 않음. 
