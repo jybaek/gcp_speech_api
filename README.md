@@ -11,4 +11,8 @@ $ sox hello.wav --channels=1 --rate 16k --bits 16 test.raw
 ```bash
 $ python3 speech.py
 Transcript: 안녕 하세요 좋은 아침입니다
+$ python3 speech_streaming.py
+====================
+transcript: 안녕 하세요 좋은 아침입니다
+confidence: 0.5344622135162354
 ```
