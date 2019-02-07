@@ -2,24 +2,36 @@
 # -*- coding: utf-8 -*-
 import io
 import os
+import argparse
+from opts import add_basic_args
+
+parser = argparse.ArgumentParser(description='speech to text')
+parser = add_basic_args(parser)
+args = parser.parse_args()
+
+if args.language_code not in ('ko-KR', 'en-US'):
+    raise ValueError('Unknown language-code')
+
+if not os.path.isfile(args.audio_path):
+    raise ValueError('No such file: ', args.audio_path)
 
 # Imports the Google Cloud client library
 try:
     from google.cloud import speech
 except ImportError:
-    print("Error speech import error")
-    exit(255)
+    raise ImportError('Error import speech error')
+
 from google.cloud.speech import types
 
 # Instantiates a client
 client = speech.SpeechClient()
 config = types.RecognitionConfig(
     encoding='LINEAR16',
-    language_code='ko-KR',
+    language_code=args.language_code,
     sample_rate_hertz=16000)
 
 # Loads the audio into memory
-with io.open("./test.raw", 'rb') as stream:
+with io.open(args.audio_path, 'rb') as stream:
     requests = [types.StreamingRecognizeRequest(
         audio_content=stream.read(),
     )]

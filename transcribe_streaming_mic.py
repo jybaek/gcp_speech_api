@@ -36,12 +36,19 @@ from google.cloud.speech import enums
 from google.cloud.speech import types
 import pyaudio
 from six.moves import queue
+import argparse
 # [END import_libraries]
 
 # Audio recording parameters
 RATE = 16000
 CHUNK = int(RATE / 10)  # 100ms
 
+parser = argparse.ArgumentParser(description='speech to text')
+parser.add_argument('--language-code', default='ko-KR', help='Language code. ( ko-KR, en-US, etc.. )')
+args = parser.parse_args()
+
+if args.language_code not in ('ko-KR', 'en-US'):
+    raise ValueError('Unknown language-code')
 
 class MicrophoneStream(object):
     """Opens a recording stream as a generator yielding the audio chunks."""
@@ -165,7 +172,7 @@ def listen_print_loop(responses):
 def main():
     # See http://g.co/cloud/speech/docs/languages
     # for a list of supported languages.
-    language_code = 'ko-KR'  # a BCP-47 language tag
+    language_code = args.language_code  # a BCP-47 language tag
 
     client = speech.SpeechClient()
     config = types.RecognitionConfig(
