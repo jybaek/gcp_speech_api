@@ -1,4 +1,4 @@
-[![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
+[![Python 3.x](https://img.shields.io/badge/python-3.x-green.svg)](https://www.python.org/downloads/release/python-360/)
 
 # Google Cloud Platform (GCP) - speech api
 This is an example using Google's speech to text api. A little more details can be found on the blog below.
