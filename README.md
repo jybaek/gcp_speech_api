@@ -6,7 +6,8 @@ This is an example using Google's speech to text api. A little more details can 
 http://jybaek.tistory.com/671
 
 ## GCP Prerequisite
-Please install [gcloud sdk](https://cloud.google.com/sdk/) first and perform authentication and resolve associated dependencies.
+  - Please install [gcloud sdk](https://cloud.google.com/sdk/) first.
+  - Perform authentication and resolve associated dependencies.
 
 ### Authentication
 ```bash
